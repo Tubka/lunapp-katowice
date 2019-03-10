@@ -578,7 +578,7 @@ body .navbar {
             width: 70%; } }
 
 .footer {
-  background: linear-gradient(90deg, rgba(136, 144, 153, 0.7), 1%, rgba(0, 0, 0, 0.9), 95%, rgba(136, 144, 153, 0.9)), url("img/brama.jpg");
+  background: linear-gradient(90deg, rgba(136, 144, 153, 0.7), 1%, rgba(0, 0, 0, 0.9), 95%, rgba(136, 144, 153, 0.9)), url("../img/brama.jpg");
   background-position: center center;
   background-size: cover; }
   .footer .footer--container {
