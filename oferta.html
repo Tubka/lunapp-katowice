@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>LunApp - oferta</title>
+  <title>LunApp - Oferta</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
@@ -18,7 +18,7 @@
 
 <body>
   <section class="navbar">
-    <section class="navbar--container">
+    <nav class="navbar--container">
       <img src="img/logo.png" alt="logo firmy lunapp" class="navbar__logo" />
       <span class="navbar__burger fas fa-bars"></span>
       <ul class="navbar__menu navbar__menu--display">
@@ -26,33 +26,40 @@
           <a class="navbar__link" href="index.html">O nas</a>
         </li>
         <li class="navbar__li navbar__link--active">
-          <a class="navbar__link " href="oferta.html">Oferta</a>
+          <a class="navbar__link" href="oferta.html">Oferta</a>
         </li>
         <li class="navbar__li">
           <a class="navbar__link" href="kontakt.html">Kontakt</a>
         </li>
       </ul>
-    </section>
+    </nav>
   </section>
   <header class="header">
-    <h1 class="header__title">Automatyka i siłowniki</h1>
-    <p class="header__desc">Zobacz ofertę automatyki i siłowników do bram, garaży i szlabanów!</p>
+    <section class="header-container">
+      <h1 class="header__title">Automatyka i siłowniki</h1>
+      <p class="header__desc">Zobacz ofertę automatyki i siłowników do bram, garaży i szlabanów!</p>
+    </section>
     <a class="header__link" href="#">ZOBACZ OFERTĘ</a>
   </header>
   <section class="about">
     <h2 class="about__title">
       O Lun<span class="about__title--green">A</span>pp
     </h2>
-    <p class="about__desc">
-      Jesteśmy młodą, ale prężnie rozwijającą się Firmą z branży automatyki
-      przemysłowej z siedzibą w Katowicach. W naszej ofecie znajdziecie
-      Państwo szeroką gamę produktów renomowanych marek tj: Came, BFT, Nice,
-      FAAC.
-    </p>
-    <p class="about__desc">
-      Nasi specjalisci doradzą Państwu w wyborze oraz zaproponują wachlarz
-      rozwiązań dla domu lub Waszej Firmy. Zapraszamy do współpracy.
-    </p>
+    <div class="about-container">
+      <div class="about-p">
+        <p class="about__desc">
+          Jesteśmy młodą, ale prężnie rozwijającą się Firmą z branży automatyki
+          przemysłowej z siedzibą w Katowicach. W naszej ofecie znajdziecie
+          Państwo szeroką gamę produktów renomowanych marek tj: Came, BFT, Nice,
+          FAAC.
+        </p>
+        <p class="about__desc">
+          Nasi specjalisci doradzą Państwu w wyborze oraz zaproponują wachlarz
+          rozwiązań dla domu lub Waszej Firmy. Zapraszamy do współpracy.
+        </p>
+      </div>
+      <img class="about__img" src="/img/cta-img.jpg" alt="">
+    </div>
   </section>
   <section class="business">
     <h2 class="business__title">
@@ -95,8 +102,8 @@
     </ul>
   </section>
   <footer class="footer">
-    <div class="footer--container">
-      <article class="footer__contact">
+    <div class="footer-container">
+      <article class="footer__section">
         <h2 class="footer__title">Menu</h2>
         <ul class="footer__list">
           <li class="footer__li"><a class="footer__link" href="#">O nas</a></li>
@@ -104,43 +111,50 @@
           <li class="footer__li"><a class="footer__link" href="#">Kontakt</a></li>
         </ul>
       </article>
-      <article class="footer__contact">
+      <article class="footer__section">
         <h2 class="footer__title">Dane firmy</h2>
         <ul class="footer__list">
-          <li class="footer__li"><a class="footer__link" href="#">Nazwa firmy: LunApp</a></li>
-          <li class="footer__li">Adres: LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4</li>
-          <li class="footer__li">NIP: 0000000000000</li>
+          <li class="footer__li">
+            <p>Nazwa firmy:</p>
+            <p class="footer__info">LunApp</p>
+          </li>
+          <li class="footer__li">
+            <p>Adres:</p>
+            <p class="footer__info">LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4</p>
+          </li>
+          <li class="footer__li">
+            <p>NIP:</p>
+            <p class="footer__info">0000000000000</p>
+          </li>
         </ul>
       </article>
-      <article class="footer__contact">
+      <article class="footer__section">
         <h2 class="footer__title">Kontakt</h2>
         <ul class="footer__list">
           <li class="footer__li">
             <a class="footer__link" href="#">
-              <p>Nazwa_fb</p>
-              <span class="footer__icon fab fa-facebook"></span>
-            </a>
+            <p>Nazwa_fb</p>
+            <span class="footer__icon fab fa-facebook"></span>
+          </a>
           </li>
           <li class="footer__li">
             <a class="footer__link" href="tel:+48500000000">
-                500000000<span
-                  class="footer__icon footer__link--green fas fa-phone-square"
-                ></span
-              ></a>
+              500000000<span
+                class="footer__icon footer__link--green fas fa-phone-square"
+              ></span
+            ></a>
           </li>
           <li class="footer__li">
             <a class="footer__link" href="mailto:test22321@o2.pl">
-                teste22323@o2.pl
-                <span class="footer__icon far fa-envelope"></span
-              ></a>
+              teste22323@o2.pl
+              <span class="footer__icon far fa-envelope"></span
+            ></a>
           </li>
         </ul>
       </article>
 
       <p class="footer__desc">
-
         <strong class="footer__web">www.LunApp.pl</strong>
-        <span class="footer__desc--gray">Wszystkie prawa zastrzeżone</span>
       </p>
     </div>
   </footer>
