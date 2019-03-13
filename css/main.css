@@ -413,8 +413,8 @@ body .navbar {
           justify-content: center; }
           @media (min-width: 640px) {
             body .navbar .navbar--container .navbar__menu .navbar__li .navbar__link {
-              font-size: 0.7em;
-              padding: 20px 30px; } }
+              font-size: 0.9em;
+              padding: 20px 20px; } }
       body .navbar .navbar--container .navbar__menu .navbar__link--active {
         border-right: 2px solid #d3e137;
         border-left: 2px solid #d3e137; }
@@ -433,8 +433,8 @@ body .navbar {
   box-sizing: border-box;
   font-family: 'roboto', sans-serif;
   height: 100vh;
-  min-height: 640px;
-  padding: 100px 0 110px 0;
+  min-height: 440px;
+  padding: 100px 0 60px 0;
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/pexels-photo-210602.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -445,10 +445,9 @@ body .navbar {
   justify-content: space-between; }
   @media (min-width: 640px) {
     .header {
-      max-height: 500px; } }
+      max-height: 400px; } }
   @media (min-width: 500px) and (orientation: landscape) {
     .header {
-      min-height: 360px;
       padding: 70px 0 40px 0; } }
   .header .header-container {
     text-align: center; }
@@ -463,9 +462,6 @@ body .navbar {
       color: #ddd;
       margin: 0 auto;
       margin-top: calc(70px - 3vw); }
-      @media (min-width: 500px) and (orientation: landscape) {
-        .header .header-container .header__desc {
-          margin-top: 20px; } }
   .header .header__link {
     text-align: center;
     font-size: 0.8em;
@@ -490,6 +486,7 @@ body .navbar {
     justify-content: flex-end;
     font-size: 1.6em;
     width: 40%;
+    min-width: 240px;
     color: #000;
     background-color: #d3e137;
     padding: 5px 10px 5px 0;
@@ -501,6 +498,9 @@ body .navbar {
     align-items: center;
     width: 70%;
     margin-top: 40px; }
+    @media (min-width: 1024px) {
+      .about .about-container {
+        flex-direction: row-reverse; } }
     .about .about-container .about-p {
       display: inline-block;
       text-align: center;
@@ -514,7 +514,7 @@ body .navbar {
         line-height: 1.4; }
         @media (min-width: 1024px) {
           .about .about-container .about-p .about__desc {
-            margin: 0 30px 20px 0; } }
+            margin: 0 30px 0 20px; } }
     .about .about-container .about__img {
       display: inline-block;
       width: 100%; }
@@ -548,7 +548,7 @@ body .navbar {
     .business .business__title .business__title--green {
       color: #d3e137; }
   .business .business__desc {
-    width: 80%;
+    width: 70%;
     font-size: 1.2em;
     line-height: 1.4;
     padding-bottom: 25px;
@@ -558,18 +558,20 @@ body .navbar {
         width: 30%;
         padding-right: 5%; } }
   .business .business__img {
-    width: 80%; }
+    width: 70%; }
     @media (min-width: 640px) {
       .business .business__img {
-        width: 50%; } }
+        width: 40%; } }
 
 .offer {
   padding-bottom: 100px;
   font-family: "roboto", sans-serif; }
   .offer .offer__title {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    min-width: 240px;
     font-size: 1.6em;
-    width: auto;
     color: #000;
     background-color: #d3e137;
     padding: 5px 10px 5px 30px;
@@ -596,6 +598,31 @@ body .navbar {
         @media (min-width: 640px) {
           .offer .offer__list .offer__li .offer__link .offer__img {
             width: 70%; } }
+
+.contact {
+  font-family: 'roboto', sans-serif; }
+  .contact .contact__title {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-end;
+    text-align: right;
+    font-size: 1.6em;
+    width: 40%;
+    min-width: 240px;
+    color: #000;
+    background-color: #d3e137;
+    padding: 5px 10px 5px 20px;
+    margin: 20px 0; }
+  .contact .contact__list {
+    text-align: center;
+    width: 80%;
+    margin: 50px auto; }
+    .contact .contact__list .contact__li {
+      margin-top: 10px; }
+      .contact .contact__list .contact__li .contact__link {
+        color: #000; }
+    .contact .contact__list .contact__link--margin {
+      margin-top: 50px; }
 
 .footer {
   background: linear-gradient(90deg, rgba(136, 144, 153, 0.7), 1%, rgba(0, 0, 0, 0.9), 95%, rgba(136, 144, 153, 0.9)), url("../img/brama.jpg");
