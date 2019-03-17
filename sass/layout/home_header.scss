@@ -133,14 +133,7 @@
   }
 
   .business__title {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: 20px 0;
-    padding: 5px 0;
-    font-size: 1.6em;
-    color: #eee;
-    border-bottom: 2px solid #{$theme_color};
+    @include title-style;
 
     .business__title--green {
       color: #{$theme_color};
@@ -179,15 +172,7 @@
   }
 
   .offer__title {
-    display: flex;
-    justify-content: flex-end;
-    width: 40%;
-    min-width: 240px;
-    margin: 20px 0;
-    padding: 5px 10px 5px 30px;
-    font-size: 1.6em;
-    color: #000;
-    background-color: #{$theme_color};
+    @include title-style;
   }
 
   .offer__list {

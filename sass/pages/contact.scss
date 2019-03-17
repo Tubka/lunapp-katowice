@@ -5,16 +5,7 @@
   // width: 100%;
 
   .contact__title {
-    display: flex;
-    align-self: flex-start;
-    justify-content: flex-end;
-    width: 40%;
-    min-width: 240px;
-    margin: 20px 0;
-    padding: 5px 10px 5px 0;
-    font-size: 1.6em;
-    color: #000;
-    background-color: #{$theme_color};
+    @include title-style;
   }
 
   .contact__list {
