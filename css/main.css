@@ -362,6 +362,9 @@ body .navbar {
       width: 122px;
       height: 37px;
       z-index: 1; }
+      @media (min-width: 640px) {
+        body .navbar .navbar--container .navbar__logo {
+          margin: 0; } }
     body .navbar .navbar--container .navbar__burger {
       font-size: 1.8rem;
       color: #ddd;
@@ -516,10 +519,11 @@ body .navbar {
           width: 45%; } }
       .about .about-container .about-p .about__desc {
         font-size: 1.2em;
-        line-height: 1.4; }
+        line-height: 1.4;
+        margin-top: 20px; }
         @media (min-width: 1024px) {
           .about .about-container .about-p .about__desc {
-            margin: 0 30px 0 20px; } }
+            margin: 20px 30px 0 20px; } }
     .about .about-container .about__img {
       display: inline-block;
       width: 100%; }
@@ -587,6 +591,9 @@ body .navbar {
     flex-direction: column;
     padding: 0;
     margin: auto auto; }
+    @media (min-width: 500px) and (orientation: landscape) {
+      .offer .offer__list {
+        min-width: 600px; } }
     @media (min-width: 640px) {
       .offer .offer__list {
         flex-direction: row; } }
@@ -610,14 +617,13 @@ body .navbar {
     display: flex;
     align-self: flex-start;
     justify-content: flex-end;
-    text-align: right;
-    font-size: 1.6em;
     width: 40%;
     min-width: 240px;
+    margin: 20px 0;
+    padding: 5px 10px 5px 0;
+    font-size: 1.6em;
     color: #000;
-    background-color: #d3e137;
-    padding: 5px 10px 5px 20px;
-    margin: 20px 0; }
+    background-color: #d3e137; }
   .contact .contact__list {
     text-align: center;
     width: 80%;
@@ -634,23 +640,23 @@ body .navbar {
   background-position: center center;
   background-size: cover; }
   .footer .footer-container {
-    margin: 0 auto;
-    width: 80%;
-    color: #ddd;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    font-family: "Roboto", sans-serif; }
+    width: 70%;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    color: #ddd; }
     .footer .footer-container .footer__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 30%;
       min-width: 200px;
       margin: 40px 0 0 0;
       padding: 0;
-      font-size: 0.7rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
+      font-size: 0.8em; }
       .footer .footer-container .footer__section .footer__title {
         margin: 10px 0 0 0; }
       .footer .footer-container .footer__section .footer__list {
@@ -693,13 +699,13 @@ body .navbar {
   display: flex;
   align-self: flex-start;
   justify-content: flex-end;
-  font-size: 1.6em;
   width: 40%;
   min-width: 240px;
-  color: #000;
-  background-color: #d3e137;
+  margin: 20px 0;
   padding: 5px 10px 5px 0;
-  margin: 20px 0; }
+  font-size: 1.6em;
+  color: #000;
+  background-color: #d3e137; }
 
 .automation .automation-container {
   width: 70%;
