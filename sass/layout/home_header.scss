@@ -46,19 +46,19 @@
       width: 80%;
       margin: 0 auto;
       margin-top: 10px;
-      // margin-top: calc(70px - 3vw);
+      // margin-top: calc(10px + 1vh);
       line-height: 1.4;
       font-size: 0.8em;
       color: #ddd;
 
       @include medium {
-        // margin-top: 20px;
-        font-size: 1em;
+        margin-top: 20px;
+        font-size: 1.2em;
       }
 
       @include large {
-        font-size: 1.2em;
-        // margin-top: 30px;
+        font-size: 1.4em;
+        margin-top: 30px;
       }
     }
   }
