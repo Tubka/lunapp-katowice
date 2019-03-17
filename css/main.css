@@ -350,6 +350,9 @@ body .navbar {
     justify-content: space-between;
     z-index: 2;
     overflow: hidden; }
+    @media (min-width: 500px) and (orientation: landscape) {
+      body .navbar .navbar--container {
+        width: 90%; } }
     @media (min-width: 640px) {
       body .navbar .navbar--container {
         width: 70%; } }
@@ -361,9 +364,9 @@ body .navbar {
       z-index: 1; }
     body .navbar .navbar--container .navbar__burger {
       font-size: 1.8rem;
-      margin-right: 24px;
       color: #ddd;
-      z-index: 1; }
+      z-index: 1;
+      margin-right: 30px; }
       @media (min-width: 640px) {
         body .navbar .navbar--container .navbar__burger {
           display: none; } }
@@ -423,11 +426,13 @@ body .navbar {
             border: none; }
             body .navbar .navbar--container .navbar__menu .navbar__link--active .navbar__link {
               color: #d3e137; } }
-    body .navbar .navbar--container .navbar__menu--display {
+    body .navbar .navbar--container .navbar__menu.navbar__menu--display {
       transform: translateY(calc(-100% - 54px)); }
       @media (min-width: 640px) {
-        body .navbar .navbar--container .navbar__menu--display {
-          transform: translateY(0); } }
+        body .navbar .navbar--container .navbar__menu.navbar__menu--display {
+          transform: translateY(0);
+          margin: 0;
+          padding: 0; } }
 
 .header {
   box-sizing: border-box;
@@ -683,3 +688,31 @@ body .navbar {
         font-weight: normal; }
       .footer .footer-container .footer__desc .footer__desc--gray {
         color: #555; }
+
+.automation .automation__title {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-end;
+  font-size: 1.6em;
+  width: 40%;
+  min-width: 240px;
+  color: #000;
+  background-color: #d3e137;
+  padding: 5px 10px 5px 0;
+  margin: 20px 0; }
+
+.automation .automation-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto 30px auto; }
+  .automation .automation-container .automation__item {
+    margin: 20px 20px 0 20px;
+    display: inline-block;
+    width: 200px; }
+    .automation .automation-container .automation__item img {
+      display: inline-block;
+      width: 100%;
+      height: 160px;
+      background-color: #000; }
