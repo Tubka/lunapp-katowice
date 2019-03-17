@@ -6,6 +6,7 @@
 
   .contact__title {
     @include title-style;
+    padding-left: 15px;
   }
 
   .contact__list {

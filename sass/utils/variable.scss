@@ -1,5 +1,5 @@
 $theme_color: #d3e137;
-$min_padding: 70px 0 40px 0; //paddingi top bottom na header
+$min_padding: 60px 0 40px 0; //paddingi top bottom na header
 $small-width: 500px;
 $medium-width: 640px;
 $large-width: 1024px;
@@ -28,9 +28,9 @@ $large-width: 1024px;
   justify-content: flex-end;
   width: 40%;
   min-width: 240px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 10px 0;
   padding: 5px 10px 5px 0;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #000;
   background-color: #{$theme_color};
 }

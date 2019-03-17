@@ -440,7 +440,7 @@ body .navbar {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 30vh;
+  height: 40vh;
   min-height: 240px;
   padding: 60px 0 40px 0;
   font-family: 'roboto', sans-serif;
@@ -450,7 +450,7 @@ body .navbar {
   background-size: cover; }
   @media (min-width: 640px) {
     .header {
-      max-height: 400px; } }
+      max-height: 300px; } }
   @media (min-width: 500px) and (orientation: landscape) {
     .header {
       padding: 60px 0 40px 0; } }
@@ -462,6 +462,12 @@ body .navbar {
       margin: 0 auto;
       font-size: 1.4em;
       color: #ddd; }
+      @media (min-width: 640px) {
+        .header .header-container .header__title {
+          font-size: 1.6em; } }
+      @media (min-width: 1024px) {
+        .header .header-container .header__title {
+          font-size: 1.8em; } }
     .header .header-container .header__desc {
       width: 80%;
       margin: 0 auto;
@@ -469,6 +475,12 @@ body .navbar {
       line-height: 1.4;
       font-size: 0.8em;
       color: #ddd; }
+      @media (min-width: 640px) {
+        .header .header-container .header__desc {
+          font-size: 1em; } }
+      @media (min-width: 1024px) {
+        .header .header-container .header__desc {
+          font-size: 1.2em; } }
   .header .header__link {
     margin-top: 10px;
     padding: 10px 30px;
@@ -613,45 +625,6 @@ body .navbar {
           .offer .offer__list .offer__li .offer__link .offer__img {
             width: 70%; } }
 
-.header-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 40vh;
-  min-height: 240px;
-  padding: 60px 0 40px 0;
-  font-family: 'roboto', sans-serif;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/pexels-photo-210602.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 640px) {
-    .header-contact {
-      max-height: 400px; } }
-  @media (min-width: 500px) and (orientation: landscape) {
-    .header-contact {
-      padding: 60px 0 40px 0; } }
-  .header-contact .header-container {
-    text-align: center;
-    width: 100%; }
-    .header-contact .header-container .header__title {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 2em;
-      color: #ddd; }
-  .header-contact .header__link {
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: 0.8em;
-    color: #ddd;
-    border: 1px solid #d3e137;
-    text-align: center; }
-    .header-contact .header__link:hover {
-      background-color: #d3e137;
-      font-weight: bold;
-      color: #000; }
-
 .contact {
   font-family: 'roboto', sans-serif; }
   .contact .contact__title {
@@ -676,50 +649,6 @@ body .navbar {
         color: #000; }
     .contact .contact__list .contact__link--margin {
       margin-top: 50px; }
-
-.header-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 70vh;
-  min-height: 240px;
-  padding: 100px 0 60px 0;
-  font-family: 'roboto', sans-serif;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/pexels-photo-210602.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 640px) {
-    .header-home {
-      max-height: 400px; } }
-  @media (min-width: 500px) and (orientation: landscape) {
-    .header-home {
-      padding: 60px 0 40px 0; } }
-  .header-home .header-container {
-    text-align: center; }
-    .header-home .header-container .header__title {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 1.4em;
-      color: #ddd; }
-    .header-home .header-container .header__desc {
-      width: 80%;
-      margin: 0 auto;
-      margin-top: calc(70px - 3vw);
-      line-height: 1.4;
-      font-size: 0.8em;
-      color: #ddd; }
-  .header-home .header__link {
-    padding: 10px 30px;
-    font-size: 0.8em;
-    color: #ddd;
-    border: 1px solid #d3e137;
-    text-align: center; }
-    .header-home .header__link:hover {
-      background-color: #d3e137;
-      font-weight: bold;
-      color: #000; }
 
 .footer {
   background: linear-gradient(90deg, rgba(136, 144, 153, 0.7), 1%, rgba(0, 0, 0, 0.9), 95%, rgba(136, 144, 153, 0.9)), url("../img/brama.jpg");
@@ -780,51 +709,6 @@ body .navbar {
         font-weight: normal; }
       .footer .footer-container .footer__desc .footer__desc--gray {
         color: #555; }
-
-.header-offer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 50vh;
-  min-height: 240px;
-  padding: 60px 0 40px 0;
-  font-family: 'roboto', sans-serif;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/pexels-photo-210602.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 640px) {
-    .header-offer {
-      max-height: 400px; } }
-  @media (min-width: 500px) and (orientation: landscape) {
-    .header-offer {
-      padding: 60px 0 40px 0; } }
-  .header-offer .header-container {
-    text-align: center; }
-    .header-offer .header-container .header__title {
-      width: 80%;
-      margin: 0 auto;
-      font-size: 1.4em;
-      color: #ddd; }
-    .header-offer .header-container .header__desc {
-      width: 80%;
-      margin: 0 auto;
-      margin-top: 10px;
-      line-height: 1.4;
-      font-size: 0.7em;
-      color: #ddd; }
-  .header-offer .header__link {
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: 0.8em;
-    color: #ddd;
-    border: 1px solid #d3e137;
-    text-align: center; }
-    .header-offer .header__link:hover {
-      background-color: #d3e137;
-      font-weight: bold;
-      color: #000; }
 
 .automation .automation__title {
   display: flex;
