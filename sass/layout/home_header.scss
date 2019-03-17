@@ -133,7 +133,14 @@
   }
 
   .business__title {
-    @include title-style;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 20px 0;
+    padding: 5px 0;
+    font-size: 1.6em;
+    color: #eee;
+    border-bottom: 2px solid #{$theme_color};
 
     .business__title--green {
       color: #{$theme_color};

@@ -544,15 +544,13 @@ body .navbar {
       justify-content: center; } }
   .business .business__title {
     display: flex;
-    align-self: flex-start;
-    justify-content: flex-end;
-    width: 40%;
-    min-width: 240px;
-    margin: 20px 0 0 0;
-    padding: 5px 10px 5px 0;
+    justify-content: center;
+    width: 80%;
+    margin: 20px 0;
+    padding: 5px 0;
     font-size: 1.6em;
-    color: #000;
-    background-color: #d3e137; }
+    color: #eee;
+    border-bottom: 2px solid #d3e137; }
     .business .business__title .business__title--green {
       color: #d3e137; }
   .business .business__desc {
