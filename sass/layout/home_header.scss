@@ -13,7 +13,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  transition: 1s;
 
   @include medium {
     max-height: 300px;
@@ -33,12 +33,8 @@
       font-size: 1.4em;
       color: #ddd;
 
-      @include medium {
-        font-size: 1.6em;
-      }
-
       @include large {
-        font-size: 1.8em;
+        font-size: 1.6em;
       }
     }
 
@@ -53,11 +49,10 @@
 
       @include medium {
         margin-top: 20px;
-        font-size: 1.2em;
       }
 
       @include large {
-        font-size: 1.4em;
+        font-size: 1em;
         margin-top: 30px;
       }
     }
@@ -75,6 +70,10 @@
       background-color: #d3e137;
       font-weight: bold;
       color: #000;
+    }
+
+    @include large {
+      font-size: 0.7em;
     }
   }
 }

@@ -447,7 +447,8 @@ body .navbar {
   background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/pexels-photo-210602.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  transition: 1s; }
   @media (min-width: 640px) {
     .header {
       max-height: 300px; } }
@@ -462,12 +463,9 @@ body .navbar {
       margin: 0 auto;
       font-size: 1.4em;
       color: #ddd; }
-      @media (min-width: 640px) {
-        .header .header-container .header__title {
-          font-size: 1.6em; } }
       @media (min-width: 1024px) {
         .header .header-container .header__title {
-          font-size: 1.8em; } }
+          font-size: 1.6em; } }
     .header .header-container .header__desc {
       width: 80%;
       margin: 0 auto;
@@ -477,11 +475,10 @@ body .navbar {
       color: #ddd; }
       @media (min-width: 640px) {
         .header .header-container .header__desc {
-          margin-top: 20px;
-          font-size: 1.2em; } }
+          margin-top: 20px; } }
       @media (min-width: 1024px) {
         .header .header-container .header__desc {
-          font-size: 1.4em;
+          font-size: 1em;
           margin-top: 30px; } }
   .header .header__link {
     margin-top: 30px;
@@ -494,6 +491,9 @@ body .navbar {
       background-color: #d3e137;
       font-weight: bold;
       color: #000; }
+    @media (min-width: 1024px) {
+      .header .header__link {
+        font-size: 0.7em; } }
 
 .about {
   display: flex;
