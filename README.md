@@ -1,6 +1,6 @@
 # lunapp
 
-Website LunApp established for business which deals with garages and barriers automation. Data in used in project are examples.
+Website LunApp established for business which sells with garages and barriers automation. Data in used in project are examples.
 
 I used in project HTML5 with methology BEM, CSS with preprocessor SASS and I created button 'hamburger' in JavaScript. 
 Usually to position the elements i applied property flexbox.
