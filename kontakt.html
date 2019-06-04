@@ -1,124 +1,180 @@
 <!DOCTYPE html>
 <html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LunApp - Kontakt</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Fahkwang:400,700|Kavivanar|Muli:400,700|Philosopher:400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>LunApp - Kontakt</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Abel|Fahkwang:400,700|Kavivanar|Muli:400,700|Philosopher:400,700&amp;subset=latin-ext"
-    rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-
-<body>
-  <section class="navbar">
-    <nav class="navbar--container">
-      <img src="img/logo.png" alt="logo firmy lunapp" class="navbar__logo" />
-      <span class="navbar__burger fas fa-bars"></span>
-      <ul class="navbar__menu navbar__menu--display">
-        <li class="navbar__li">
-          <a class="navbar__link" href="index.html">O nas</a>
+  <body>
+    <section class="navbar">
+      <nav class="navbar--container">
+        <img src="img/logo.png" alt="logo firmy lunapp" class="navbar__logo" />
+        <!-- <span class="navbar__burger fas fa-bars"></span> -->
+        <div class="navbar__burger">
+          <div class="navbar__burger-line navbar__burger-line--first"></div>
+          <div class="navbar__burger-line navbar__burger-line--mid"></div>
+          <div class="navbar__burger-line navbar__burger-line--last"></div>
+        </div>
+        <ul class="navbar__menu navbar__menu--display">
+          <li class="navbar__li">
+            <a class="navbar__link" href="index.html">O nas</a>
+          </li>
+          <li class="navbar__li">
+            <a class="navbar__link" href="oferta.html">Oferta</a>
+          </li>
+          <li class="navbar__li navbar__link--active">
+            <a class="navbar__link" href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <header class="header">
+      <section class="header-container">
+        <h1 class="header__title">Automatyka i siłowniki</h1>
+        <p class="header__desc">
+          Zobacz ofertę automatyki i siłowników do bram, garaży i szlabanów!
+        </p>
+      </section>
+      <a class="header__link" href="#">ZOBACZ OFERTĘ</a>
+    </header>
+    <section class="contact">
+      <h1 class="contact__title">
+        Jeżeli masz pytania, skontaktuj się z nami!
+      </h1>
+      <ul class="contact__list">
+        <li class="contact__li">
+          Adres: <strong>LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4</strong>
         </li>
-        <li class="navbar__li">
-          <a class="navbar__link" href="oferta.html">Oferta</a>
+        <li class="contact__li">
+          <a class="contact__link" href="tel:+48572628787"
+            >Tel: <strong>+48 572 628 787</strong></a
+          >
         </li>
-        <li class="navbar__li navbar__link--active">
-          <a class="navbar__link" href="kontakt.html">Kontakt</a>
+        <li class="contact__li">
+          <a class="contact__link" href="mailto:ewapudelko@lunapp.pl">
+            e-mail: <strong>ewapudelko@lunapp.pl</strong></a
+          >
+        </li>
+        <li class="contact__li contact__link--margin">
+          <a class="contact__link" href="mailto:export@lunapp.pl">
+            e-mail: <strong>export@lunapp.pl</strong></a
+          >
+        </li>
+        <li class="contact__li">
+          <a class="contact__link" href="mailto:administration@lunapp.pl">
+            e-mail: <strong>administration@lunapp.pl</strong></a
+          >
+        </li>
+        <li class="contact__li">
+          <a class="contact__link" href="mailto:accounting@lunapp.pl">
+            e-mail: <strong>accounting@lunapp.pl</strong></a
+          >
+        </li>
+        <li class="contact__li">
+          <a class="contact__link" href="mailto:sales@lunapp.pl">
+            e-mail: <strong>sales@lunapp.pl</strong></a
+          >
         </li>
       </ul>
-    </nav>
-  </section>
-  <header class="header">
-    <section class="header-container">
-      <h1 class="header__title">Automatyka i siłowniki</h1>
-      <p class="header__desc">Zobacz ofertę automatyki i siłowników do bram, garaży i szlabanów!</p>
+      <iframe
+        class="contact__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.057744391051!2d18.965248415602012!3d50.27218040807519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cde612bfb1d7%3A0x1d20ca606e58bbab!2sKleofas+Park!5e0!3m2!1spl!2spl!4v1539070632940"
+        width="100%"
+        height="450"
+        frameborder="0"
+        style="border:0"
+        allowfullscreen
+      ></iframe>
     </section>
-    <a class="header__link" href="#">ZOBACZ OFERTĘ</a>
-  </header>
-  <section class="contact">
-    <h1 class="contact__title">Jeżeli masz pytania, skontaktuj się z nami!</h1>
-    <ul class="contact__list">
-      <li class="contact__li">Adres: <strong>LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4</strong></li>
-      <li class="contact__li"><a class="contact__link" href="tel:+48500000000">Tel: <strong>-500000000</strong></a></li>
-      <li class="contact__li"><a class="contact__link" href="mailto:test22321@o2.pl">
-          e-mail: <strong>teste22323@o2.pl</strong></a></li>
-      <li class="contact__li contact__link--margin"><a class="contact__link" href="mailto:test22321@o2.pl">
-          e-mail: <strong>teste22323@o2.pl</strong></a></li>
-      <li class="contact__li"><a class="contact__link" href="mailto:test22321@o2.pl">
-          e-mail: <strong>teste22323@o2.pl</strong></a></li>
-      <li class="contact__li"><a class="contact__link" href="mailto:test22321@o2.pl">
-          e-mail: <strong>teste22323@o2.pl</strong></a></li>
-      <li class="contact__li"><a class="contact__link" href="mailto:test22321@o2.pl">
-          e-mail: <strong>teste22323@o2.pl</strong></a></li>
-    </ul>
-    <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.057744391051!2d18.965248415602012!3d50.27218040807519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cde612bfb1d7%3A0x1d20ca606e58bbab!2sKleofas+Park!5e0!3m2!1spl!2spl!4v1539070632940"
-      width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </section>
-  <footer class="footer">
-    <section class="footer-container">
-      <article class="footer__section">
-        <h2 class="footer__title">Menu</h2>
-        <ul class="footer__list">
-          <li class="footer__li"><a class="footer__link" href="#">O nas</a></li>
-          <li class="footer__li"><a class="footer__link" href="#">Oferta</a></li>
-          <li class="footer__li"><a class="footer__link" href="#">Kontakt</a></li>
-        </ul>
-      </article>
-      <article class="footer__section">
-        <h2 class="footer__title">Dane firmy</h2>
-        <ul class="footer__list">
-          <li class="footer__li">
-            <p>Nazwa firmy:</p>
-            <p class="footer__info">LunApp</p>
-          </li>
-          <li class="footer__li">
-            <p>Adres:</p>
-            <p class="footer__info">LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4</p>
-          </li>
-          <li class="footer__li">
-            <p>NIP:</p>
-            <p class="footer__info">0000000000000</p>
-          </li>
-        </ul>
-      </article>
-      <article class="footer__section">
-        <h2 class="footer__title">Kontakt</h2>
-        <ul class="footer__list">
-          <li class="footer__li">
-            <a class="footer__link" href="#">
-            <p>Nazwa_fb</p>
-            <span class="footer__icon fab fa-facebook"></span>
-          </a>
-          </li>
-          <li class="footer__li">
-            <a class="footer__link" href="tel:+48500000000">
-              500000000<span
-                class="footer__icon footer__link--green fas fa-phone-square"
-              ></span
-            ></a>
-          </li>
-          <li class="footer__li">
-            <a class="footer__link" href="mailto:test22321@o2.pl">
-              teste22323@o2.pl
-              <span class="footer__icon far fa-envelope"></span
-            ></a>
-          </li>
-        </ul>
-      </article>
+    <footer class="footer">
+      <section class="footer-container">
+        <article class="footer__section">
+          <h2 class="footer__title">Menu</h2>
+          <ul class="footer__list">
+            <li class="footer__li">
+              <a class="footer__link" href="index.html">O nas</a>
+            </li>
+            <li class="footer__li">
+              <a class="footer__link" href="oferta.html">Oferta</a>
+            </li>
+            <li class="footer__li">
+              <a class="footer__link" href="kontakt.html">Kontakt</a>
+            </li>
+          </ul>
+        </article>
+        <article class="footer__section">
+          <h2 class="footer__title">Dane firmy</h2>
+          <ul class="footer__list">
+            <li class="footer__li">
+              <p>Nazwa firmy:</p>
+              <p class="footer__info">LunApp</p>
+            </li>
+            <li class="footer__li">
+              <p>Adres:</p>
+              <p class="footer__info">
+                LOFT KLEOFAS PARK KATOWICE ul.Gliwicka 275/4
+              </p>
+            </li>
+            <li class="footer__li">
+              <p>NIP:</p>
+              <p class="footer__info">6342920994</p>
+            </li>
+            <li class="footer__li">
+              <p>REGON:</p>
+              <p class="footer__info">369267480</p>
+            </li>
+          </ul>
+        </article>
+        <article class="footer__section">
+          <h2 class="footer__title">Kontakt</h2>
+          <ul class="footer__list">
+            <li class="footer__li">
+              <a class="footer__link" href="#">
+                <p>Nazwa_fb</p>
+                <span class="footer__icon fab fa-facebook"></span>
+              </a>
+            </li>
+            <li class="footer__li">
+              <a class="footer__link" href="tel:+48572628787">
+                572 628 787<span
+                  class="footer__icon footer__link--green fas fa-phone-square"
+                ></span
+              ></a>
+            </li>
+            <li class="footer__li">
+              <a class="footer__link" href="mailto:ewapudelko@lunapp.pl">
+                ewapudelko@lunapp.pl
+                <span class="footer__icon far fa-envelope"></span
+              ></a>
+            </li>
+          </ul>
+        </article>
 
-      <p class="footer__desc">
-        <strong class="footer__web">www.LunApp.pl</strong>
-      </p>
-    </section>
-  </footer>
+        <p class="footer__desc">
+          <strong class="footer__web">www.LunApp.pl</strong>
+        </p>
+      </section>
+    </footer>
 
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
