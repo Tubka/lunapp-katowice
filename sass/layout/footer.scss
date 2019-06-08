@@ -1,17 +1,24 @@
 @import "../utils/variable.scss";
 
 .footer {
-  background: linear-gradient(90deg, rgba(136, 144, 153, 0.7), 1%, rgba(0, 0, 0, 0.9), 95%, rgba(136, 144, 153, 0.9)), url('../img/brama.jpg');
+  background: linear-gradient(
+      90deg,
+      rgba(136, 144, 153, 0.7),
+      1%,
+      rgba(0, 0, 0, 0.9),
+      95%,
+      rgba(136, 144, 153, 0.9)
+    ),
+    url("../img/brama.jpg");
   background-position: center center;
   background-size: cover;
-
 
   .footer-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
     color: #ddd;
@@ -31,8 +38,14 @@
       }
 
       .footer__list {
-        width: 70%;
+        width: 90%;
+        min-width: 180px;
+        max-width: 250px;
         margin: 0;
+
+        @include medium {
+          width: 80%;
+        }
 
         .footer__li {
           margin: 20px 0;
@@ -43,12 +56,21 @@
           }
 
           .footer__link {
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
             padding: 0;
             color: #eee;
+
+            &:hover {
+              color: #aaa;
+
+              .footer__icon {
+                opacity: 0.6;
+              }
+            }
 
             @include medium {
               margin: 0 auto;
@@ -65,7 +87,6 @@
 
             .footer__link--green {
               color: rgb(62, 241, 62);
-
             }
           }
         }

@@ -1,0 +1,24 @@
+{
+  "name": "lunapp",
+  "version": "1.0.0",
+  "description": "Website LunApp established for business which sells with garages and barriers automation. Data in used in project are examples.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx node-sass -w sass/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tubka/lunapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tubka/lunapp/issues"
+  },
+  "homepage": "https://github.com/Tubka/lunapp#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
