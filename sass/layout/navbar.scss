@@ -2,40 +2,142 @@
 // kolor paska
 // background: linear-gradient(90deg, rgba(136, 144, 153, 0.6), 5%, rgba(31, 132, 214, 0.6), 95%, rgba(136, 144, 153, 0.6));
 
-html {
-  font-size: 1.1em;
+* {
+  box-sizing: border-box;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+body {
+  .navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    font-family: "roboto", sans-serif;
+    border-bottom: 1px solid #{$theme_color};
 
-  body {
-    // height: 300vh;
-
-    .navbar {
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      width: 100%;
+    @include medium {
       height: 40px;
+      font-size: 0.8em;
+    }
+
+    //pseudoelement dla background navbar, aby działać dobrze background'em na z-index
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
       top: 0;
       left: 0;
-      font-family: "roboto", sans-serif;
-      border-bottom: 1px solid #{$theme_color};
+      background: linear-gradient(
+        90deg,
+        rgba(136, 144, 153, 0.6),
+        1%,
+        rgb(0, 0, 0),
+        95%,
+        rgba(136, 144, 153, 0.6)
+      );
+      z-index: 1;
+    }
 
-      @include medium {
-        height: 40px;
-        font-size: 0.8em;
+    .navbar--container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+      overflow: hidden;
+
+      @include small_landscape {
+        width: 90%;
       }
 
-      //pseudoelement dla background navbar, aby działać dobrze background'em na z-index
-      &::before {
-        content: "";
+      @include medium {
+        width: 70%;
+      }
+
+      .navbar__logo {
+        width: 122px;
+        height: 37px;
+        margin: 0 0 0 8px;
+        padding: 0;
+        z-index: 1;
+
+        @include medium {
+          margin: 0;
+        }
+      }
+
+      .navbar__burger {
+        position: relative;
+        margin-right: 30px;
+        height: 18px;
+        width: 34px;
+        z-index: 1;
+
+        @include medium {
+          display: none;
+        }
+
+        &-line {
+          position: absolute;
+          background-color: #fff;
+          width: 100%;
+          height: 2px;
+          border-radius: 2px;
+
+          &--first {
+            top: 0;
+            left: 0;
+          }
+          &--mid {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+
+          &--last {
+            top: 100%;
+            left: 0;
+            transform: translateY(-100%);
+          }
+        }
+
+        .navbar__burger-line--first.navbar__burger-animation {
+          animation: burger-anima-first 0.5s ease forwards;
+        }
+
+        .navbar__burger-line--mid.navbar__burger-animation {
+          animation: burger-anima-mid 0.5s ease forwards;
+        }
+        .navbar__burger-line--last.navbar__burger-animation {
+          animation: burger-anima-last 0.5s ease forwards;
+        }
+
+        .navbar__burger-line--first.navbar__burger-animation-reverse {
+          animation: burger-anima-first 0.5s ease reverse;
+        }
+        .navbar__burger-line--mid.navbar__burger-animation-reverse {
+          animation: burger-anima-mid 0.5s ease reverse;
+        }
+        .navbar__burger-line--last.navbar__burger-animation-reverse {
+          animation: burger-anima-last 0.5s ease reverse;
+        }
+      }
+
+      .navbar__menu {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100%;
-        height: 100%;
-        top: 0;
+        top: 40px;
         left: 0;
+        padding: 20px 0;
         background: linear-gradient(
           90deg,
           rgba(136, 144, 153, 0.6),
@@ -44,247 +146,141 @@ html {
           95%,
           rgba(136, 144, 153, 0.6)
         );
-        z-index: 1;
-      }
-
-      .navbar--container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        z-index: 2;
-        overflow: hidden;
-
-        @include small_landscape {
-          width: 90%;
-        }
+        border-bottom: 1px solid #{$theme_color};
+        z-index: 0;
+        transition: 0.5s;
 
         @include medium {
-          width: 70%;
-        }
-
-        .navbar__logo {
-          width: 122px;
-          height: 37px;
-          margin: 0 0 0 8px;
-          padding: 0;
-          z-index: 1;
-
-          @include medium {
-            margin: 0;
-          }
-        }
-
-        .navbar__burger {
           position: relative;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          height: auto;
+          top: auto;
           margin-right: 30px;
-          height: 18px;
-          width: 34px;
+          padding: 5px 5px 5px 5px;
+          background: transparent;
           z-index: 1;
-
-          @include medium {
-            display: none;
-          }
-
-          &-line {
-            position: absolute;
-            background-color: #fff;
-            width: 100%;
-            height: 2px;
-            border-radius: 2px;
-
-            &--first {
-              top: 0;
-              left: 0;
-            }
-            &--mid {
-              top: 50%;
-              left: 0;
-              transform: translateY(-50%);
-            }
-
-            &--last {
-              top: 100%;
-              left: 0;
-              transform: translateY(-100%);
-            }
-          }
-
-          .navbar__burger-line--first.navbar__burger-animation {
-            animation: burger-anima-first 0.5s ease forwards;
-          }
-
-          .navbar__burger-line--mid.navbar__burger-animation {
-            animation: burger-anima-mid 0.5s ease forwards;
-          }
-          .navbar__burger-line--last.navbar__burger-animation {
-            animation: burger-anima-last 0.5s ease forwards;
-          }
-
-          .navbar__burger-line--first.navbar__burger-animation-reverse {
-            animation: burger-anima-first 0.5s ease reverse;
-          }
-          .navbar__burger-line--mid.navbar__burger-animation-reverse {
-            animation: burger-anima-mid 0.5s ease reverse;
-          }
-          .navbar__burger-line--last.navbar__burger-animation-reverse {
-            animation: burger-anima-last 0.5s ease reverse;
-          }
         }
 
-        .navbar__menu {
-          position: absolute;
+        .navbar__li {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          align-self: center;
           width: 100%;
-          top: 40px;
-          left: 0;
-          padding: 20px 0;
-          background: linear-gradient(
-            90deg,
-            rgba(136, 144, 153, 0.6),
-            1%,
-            rgb(0, 0, 0),
-            95%,
-            rgba(136, 144, 153, 0.6)
-          );
-          border-bottom: 1px solid #{$theme_color};
-          z-index: 0;
-          transition: 0.5s;
+          font-size: 1.4em;
 
           @include medium {
-            position: relative;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            height: auto;
-            top: auto;
-            margin-right: 30px;
-            padding: 5px 5px 5px 5px;
-            background: transparent;
-            z-index: 1;
+            align-self: auto;
+            width: auto;
+            height: 100%;
+            border-bottom: none;
           }
 
-          .navbar__li {
-            display: flex;
-            align-self: center;
+          .navbar__link {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            line-height: 240%;
+            color: #ddd;
+            transition: 0.5s;
 
-            @include medium {
-              align-self: auto;
-              width: auto;
-              height: 100%;
-              border-bottom: none;
-            }
-
-            .navbar__link {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              line-height: 240%;
-              color: #ddd;
-
-              &:hover {
-                color: #aaa;
-              }
-              @include medium {
-                padding: 20px 20px;
-                font-size: 0.9em;
-              }
-            }
-          }
-
-          .navbar__link--active {
-            border-right: 2px solid #{$theme_color};
-            border-left: 2px solid #{$theme_color};
-
-            .navbar__link {
-              color: #{$theme_color};
+            &:hover {
+              color: #aaa;
             }
             @include medium {
-              border: none;
+              padding: 20px 20px;
+              font-size: 0.9em;
             }
           }
         }
 
-        .navbar__menu--display {
-          transform: translateY(calc(-100% - 54px));
+        .navbar__link--active {
+          border-right: 2px solid #{$theme_color};
+          border-left: 2px solid #{$theme_color};
 
+          .navbar__link {
+            color: #{$theme_color};
+          }
           @include medium {
-            margin: 0;
-            padding: 0;
-            transform: translateY(0);
+            border: none;
           }
         }
       }
-    }
 
-    @include keyframes(burger-anima-first) {
-      0% {
-        top: 0;
-        transform: translateY(0) rotate(0);
-      }
-      20% {
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      .navbar__menu--display {
+        transform: translateY(calc(-100% - 54px));
 
-      25% {
-        transform: translateY(-50%) rotate(0);
-      }
-
-      85% {
-        transform: translateY(-50%) rotate(495deg);
-      }
-
-      100% {
-        top: 50%;
-        transform: translateY(-50%) rotate(495deg);
+        @include medium {
+          margin: 0;
+          padding: 0;
+          transform: translateY(0);
+        }
       }
     }
+  }
 
-    @include keyframes(burger-anima-mid) {
-      0% {
-        opacity: 1;
-      }
-      30% {
-      }
-
-      39% {
-      }
-
-      85% {
-      }
-
-      100% {
-        opacity: 0;
-      }
+  @include keyframes(burger-anima-first) {
+    0% {
+      top: 0;
+      transform: translateY(0) rotate(0);
+    }
+    20% {
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    @include keyframes(burger-anima-last) {
-      0% {
-        top: 100%;
-        transform: translateY(-100%) rotate(0);
-      }
-      20% {
-        top: 50%;
-        transform: translateY(-50%);
-      }
+    25% {
+      transform: translateY(-50%) rotate(0);
+    }
 
-      25% {
-        transform: translateY(-50%) rotate(0);
-      }
+    85% {
+      transform: translateY(-50%) rotate(495deg);
+    }
 
-      85% {
-        transform: translateY(-50%) rotate(405deg);
-      }
-      100% {
-        top: 50%;
-        transform: translateY(-50%) rotate(405deg);
-      }
+    100% {
+      top: 50%;
+      transform: translateY(-50%) rotate(495deg);
+    }
+  }
+
+  @include keyframes(burger-anima-mid) {
+    0% {
+      opacity: 1;
+    }
+    30% {
+    }
+
+    39% {
+    }
+
+    85% {
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @include keyframes(burger-anima-last) {
+    0% {
+      top: 100%;
+      transform: translateY(-100%) rotate(0);
+    }
+    20% {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    25% {
+      transform: translateY(-50%) rotate(0);
+    }
+
+    85% {
+      transform: translateY(-50%) rotate(405deg);
+    }
+    100% {
+      top: 50%;
+      transform: translateY(-50%) rotate(405deg);
     }
   }
 }

@@ -27,7 +27,21 @@ const init = () => {
     }
   };
 
+  const offMenu = () => {
+    if (
+      !menuList.classList.contains("navbar__menu--display") &&
+      menuList.getBoundingClientRect().top >= 0
+    ) {
+      lines.forEach(animationReset);
+      void lines[0].offsetWidth;
+      menuList.classList.add("navbar__menu--display");
+      lines.forEach(animationReverse);
+    }
+  };
   hamb.addEventListener("click", menu);
+  document.body.addEventListener("click", offMenu);
+
+  console.log(menuList.getBoundingClientRect().top);
 };
 
 window.onload = () => {
