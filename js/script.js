@@ -27,7 +27,7 @@ const init = () => {
     }
   };
 
-  const offMenu = () => {
+  const hiddenMenu = () => {
     if (
       !menuList.classList.contains("navbar__menu--display") &&
       menuList.getBoundingClientRect().top >= 0
@@ -39,7 +39,7 @@ const init = () => {
     }
   };
   hamb.addEventListener("click", menu);
-  document.body.addEventListener("click", offMenu);
+  window.addEventListener("scroll", hiddenMenu);
 
   console.log(menuList.getBoundingClientRect().top);
 };

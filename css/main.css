@@ -445,7 +445,8 @@ body .navbar {
           justify-content: center;
           line-height: 240%;
           color: #ddd;
-          transition: 0.5s; }
+          transition: 0.5s;
+          font-size: 0.8em; }
           body .navbar .navbar--container .navbar__menu .navbar__li .navbar__link:hover {
             color: #aaa; }
           @media (min-width: 640px) {
