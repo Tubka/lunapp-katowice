@@ -1,8 +1,5 @@
 @import "../utils/variable.scss";
 
-html {
-  // font-size: 1.3rem;
-}
 
 .header {
   display: flex;
@@ -33,7 +30,7 @@ html {
     width: 100%;
 
     .header__title {
-      width: 80%;
+      max-width: 80%;
       margin: 0 auto;
       font-size: 1.4em;
       color: #ddd;
@@ -44,7 +41,7 @@ html {
     }
 
     .header__desc {
-      width: 80%;
+      max-width: 80%;
       margin: 0 auto;
       margin-top: 10px;
       // margin-top: calc(10px + 1vh);

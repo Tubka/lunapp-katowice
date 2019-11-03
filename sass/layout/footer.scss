@@ -22,7 +22,7 @@
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
     color: #ddd;
-
+  }
     .footer__section {
       display: flex;
       flex-direction: column;
@@ -32,7 +32,7 @@
       margin: 40px 0 0 0;
       padding: 0;
       font-size: 0.8em;
-
+    }
       .footer__title {
         margin: 10px 0 0 0;
       }
@@ -46,9 +46,11 @@
         @include medium {
           width: 90%;
         }
+      }
 
         .footer__li {
           margin: 20px 0;
+        }
 
           .footer__info {
             margin-top: 2px;
@@ -67,9 +69,10 @@
             &:hover {
               color: #aaa;
 
-              .footer__icon {
-                opacity: 0.6;
-              }
+            }
+
+            .footer__icon {
+              opacity: 0.6;
             }
 
             @include medium {
@@ -87,9 +90,8 @@
 
             .footer__link--green {
               color: rgb(62, 241, 62);
-            }
+            
           }
-        }
       }
     }
 
@@ -106,6 +108,8 @@
       .footer__desc--gray {
         color: #555;
       }
-    }
-  }
+}
+
+.footer__none {
+  display: none;
 }
